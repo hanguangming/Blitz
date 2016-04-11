@@ -1,0 +1,16 @@
+%include "message.sdl"
+
+message CL_Login<CL_LOGIN> {
+    struct request : ISerial {
+        uint32 uid;
+        uint64 key;
+    };
+
+    struct response {
+        string name;
+        uint8 side;
+        string map_host;
+        uint16 map_port;
+    };
+};
+

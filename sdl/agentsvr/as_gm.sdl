@@ -1,0 +1,96 @@
+%include "message.sdl"
+
+message GM_AddItem<GM_ADD_ITEM> {
+    struct request {
+        uint32 item;
+        uint32 count;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_AddMoney<GM_ADD_MONEY> {
+    struct request {
+        uint8 type;
+        uint32 value;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_AddHero<GM_ADD_HERO> {
+    struct request {
+        uint32 sid;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_UpdateSoldierLevel<GM_UPDATE_SOLDIER_LEVEL> {
+    struct request {
+        uint32 sid;
+        uint32 level;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_UpdateLevel<GM_UPDATE_LEVEL> {
+    struct request {
+        uint32 level;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_UpdateVip<GM_UPDATE_VIP> {
+    struct request {
+        uint32 level;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_UpdateStage<GM_UPDATE_STAGE> {
+    struct request {
+        uint32 stage;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_AddExp<GM_ADD_EXP> {
+    struct request {
+        uint32 exp;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_UpdateMorders<GM_UPDATE_MORDERS> {
+    struct request {
+        uint32 morders;
+    };
+    struct response {
+        string result;
+    };
+};
+
+message GM_FightWith<GM_FIGHT_WITH> {
+    struct request {
+        uint32 target;
+    };
+    struct response {
+        string result;
+    };
+};
+
+

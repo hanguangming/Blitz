@@ -1,0 +1,14 @@
+%include "message.sdl"
+
+message WS_ArenaAward<WS_ARENA_AWARD> {
+    struct request {
+    };
+    struct response {
+        uint32 rank;
+        uint32 arena;
+        uint32 arena2;
+        uint32 arena_day;
+    };
+};
+
+

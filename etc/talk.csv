@@ -1,0 +1,7 @@
+频道,频道ID,花费时间,消耗数量
+string,number,number,number
+name,id,time,itemnumber
+,,,
+世界,1,0,100
+国家,2,10,0
+私聊,3,10,0

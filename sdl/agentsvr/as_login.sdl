@@ -1,0 +1,13 @@
+%include "message.sdl"
+
+message AS_Login<AS_LOGIN> {
+    struct request {
+    };
+
+    struct response {
+        uint64 key;
+        string host;
+        uint16 port;
+    };
+};
+

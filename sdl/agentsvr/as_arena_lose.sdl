@@ -1,0 +1,15 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightInfo;
+
+message AS_ArenaLose<AS_ARENA_LOSE> {
+    struct request {
+        G_FightInfo fight_info;
+    };
+    struct response {
+    };
+};
+

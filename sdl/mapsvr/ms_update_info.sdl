@@ -1,0 +1,41 @@
+%%cpp
+#include "libgame/g_map.h"
+
+%include "message.sdl"
+
+message MS_UpdateLevel<MS_UPDATE_LEVEL> {
+    struct request : INotify {
+        uint32 uid;
+        uint16 level;
+    };
+};
+
+message MS_UpdateVip<MS_UPDATE_VIP> {
+    struct request : INotify {
+        uint32 uid;
+        uint8 vip;
+    };
+};
+
+message MS_UpdateSide<MS_UPDATE_SIDE> {
+    struct request : INotify {
+        uint32 uid;
+        uint8 side;
+    };
+};
+
+message MS_UpdateAppearance<MS_UPDATE_APPEARANCE> {
+    struct request : INotify {
+        uint32 uid;
+        uint32 appearance;
+    };
+};
+
+message MS_UpdateSpeed<MS_UPDATE_SPEED> {
+    struct request : INotify {
+        uint32 uid;
+        uint16 speed;
+    };
+};
+
+

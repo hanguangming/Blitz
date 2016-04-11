@@ -1,0 +1,11 @@
+﻿编号	名称	速度(像素/秒)	动作	类名	说的话	是否有对话框	站立或对话显示时间	资源
+id	name	spe	act	cla	dia	isdia	time	csb
+number	string	string	string	string	string	string	number	string
+1	道士	19.6	"Walk,Attack"	com.zc.anim.lib.DaoShi	"(我的滑板鞋,时尚时尚最时尚)(要不是打不过你,早跟你翻脸了)(英雄不问出路,流氓不看岁数)(钱不是问题,问题是没钱)(听说征收可以获得大量的金钱)(秃驴，敢跟贫道抢师太！)"	1	3000	csb/xiaoren/daoshi.csb
+2	农民	32.67	"Walk,Attack"	com.zc.anim.lib.NongMin	"(不吃饱,哪有力气减肥啊)(人贵在言而有信—我说不还钱就不还钱)(天哪,我的衣服又瘦了)(为什么关羽比张飞死得早?红颜薄命呗)(我喜欢交朋友，尤其是女朋友)(武将的品质越好,成长属性也就越高哦)(谁说女子不如男，我媳妇就打得过我)"	1	3000	csb/xiaoren/nongmin.csb
+3	屠夫	32.67	"Walk,Attack"	com.zc.anim.lib.TuFu	"(我会假装四处看看风景)(大力出奇迹)(爱情，就像三国，合久必分，分久必合)(上班的心情比上坟还沉重)(八戒，别以为你站在路灯下就是夜明猪了)(打不过敌人的时候,记得去强化武器和升级武将哦)(壮士，你的肥皂掉了）"	1	3000	csb/xiaoren/tufu.csb
+4	担夫	20	"Walk,Attack"	com.zc.anim.lib.DanFu	(网上自古无娇娘，残花败柳一行行，偶有几对鸳鸯鸟，也是野鸡配色狼)(壮士，你怀孕了！)(早上刚一起床，就有一股睡午觉的冲动。)(世界上最遥远的距离，就是星期一到星期五)	1	3000	csb/xiaoren/danfu.csb
+5	农民和狗	150	"Walk,Attack"	com.zc.anim.lib.NongMinAndGou	()	0	3000	csb/xiaoren/nongminyugou.csb
+6	狗和农民	50	Walk	com.zc.anim.lib.GouAndNongMin	()	0	3000	csb/xiaoren/gouyunongmin.csb
+7	小翠	18	"Walk,Attack"	com.zc.anim.lib.XiaoCui	(今天你对我爱理不理，将来我让你高攀不起)(妈妈说不能交不三不四的朋友，所以我的朋友都很二)(我的意中人是个盖世英雄，有一天他会踩着七色的云彩来娶我)（老王真是个好人，今晚要带我去吃麻辣烫，6块的哦）	1	3000	csb/xiaoren/xiaocui.csb
+8	春丽	25	string	string	(所有人都要在我面前低头！)（我是世界上最强的女人!）(看到我的丸子头，还不知道我就是人见人爱的春丽！)(我是春丽，来自中国，功夫是我的看家本领，但微笑才是我的杀手锏.)	1	3000	csb/xiaoren/chunli.csb

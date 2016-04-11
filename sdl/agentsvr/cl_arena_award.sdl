@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message CL_ArenaAward<CL_ARENA_AWARD> {
+    struct request : INotify {
+    };
+    struct response {
+    };
+};
+
+

@@ -1,0 +1,58 @@
+%%cpp
+#include "libgame/g_value.h"
+#include "libgame/g_bag.h"
+#include "libgame/g_soldier.h"
+
+%include "message.sdl"
+
+extern G_ValueOpt;
+extern G_BagItemOpt;
+extern G_SoldierValueOpt;
+
+message DB_UseCoinItem<DB_USE_COIN_ITEM> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_UseMoneyItem<DB_USE_MONEY_ITEM> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_UseExpItem<DB_USE_EXP_ITEM> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_UseSoulItem<DB_USE_SOUL_ITEM> {
+    struct request {
+        G_SoldierValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+    };
+
+    struct response {
+    };
+};
+
+message DB_UseBoxItem<DB_USE_BOX_ITEM> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+    };
+    struct response {
+    };
+};
+
+

@@ -1,0 +1,13 @@
+%%
+
+struct G_PlayerInfo {
+    string name;
+    uint16 level;
+    uint8 vip;
+    uint8 speed;
+    uint8 side;
+    uint32 appearance;
+};
+
+%%
+

@@ -1,0 +1,12 @@
+%%
+
+struct G_BagItemOpt {
+    uint32  id;
+    uint32  base;
+    uint32  count;
+    int8    used;
+    uint32  value;
+};
+
+%%
+

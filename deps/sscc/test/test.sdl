@@ -1,0 +1,81 @@
+%option default_base ISerial
+%option request_base ISerial
+%option response_base ISerial
+%option request_name "%sReq"
+%option response_name "%sRsp"
+
+%%cpp
+#include "aaaa.h"
+
+%%
+
+enum {
+    A1, /**/ //aaaa
+    A2,
+    A3,
+    A4,
+};
+
+struct foo {
+    int8 aaaa;
+    int32 bbb;
+    int32 ccc;
+};
+
+struct foo2 {
+    foo rows[];
+};
+
+struct struct_a {
+    int8 ka;
+    int8<A1..A2> a1[A1..A2] = 0;
+    foo ary[];
+    uint8 a2 = 1;
+    int16 a3;
+    uint16 a4;
+    int32 a5 = 111111111;
+    uint32 a6;
+    int64 a7;
+    uint64 a8 = -1;
+    float a9;
+    double a10;
+    string a11;
+
+    foo f;
+
+    string a12;
+
+    union_ptr<a4> {
+        A3 : foo;
+        A2 : foo2;
+    } ptr;
+
+    union<a3> {
+        A2 : double kkk;
+    };
+
+    union<a2> {
+        A1 : foo fff;
+        A2 : int8 as1 = 1;
+    };
+    union<a3> {
+        A2 : int8 a1;
+        A3 : string str;
+    } aaa;
+};
+
+struct struct_b : struct_a {
+    struct_a aa;
+};
+
+%define NNNN 1
+%define NNNN2 2
+message kaka<NNNN> {
+    struct request : struct_b {
+        int8 a;
+    };
+    struct response : struct_a {
+    };
+};
+
+

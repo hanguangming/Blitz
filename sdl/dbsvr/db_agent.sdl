@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message DB_Agent<DB_AGENT> {
+    struct request {
+        uint32 server;
+        uint64 time;
+    };
+    struct response {
+    };
+};
+

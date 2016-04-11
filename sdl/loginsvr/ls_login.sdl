@@ -1,0 +1,25 @@
+%include "message.sdl"
+
+message LS_LoginAccount<LS_LOGIN_ACCOUNT> {
+    struct request : ISerial {
+        string user;
+        string pwd;
+    };
+    struct response {
+        uint32 uid;
+        uint64 key;
+        string host;
+        uint16 port;
+    };
+};
+
+message LS_LoginSession<LS_LOGIN_SESSION> {
+    struct request {
+        uint32 uid;
+        uint64 key;
+    };
+    struct response {
+        uint64 key;
+    };
+};
+

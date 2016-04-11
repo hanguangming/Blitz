@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message WS_ScoreUpdate<WS_SCORE_UPDATE> {
+    struct request : INotify {
+        uint32 uid;
+        uint32 score;
+    };
+};
+
+

@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message CL_MapPvp<CL_MAP_PVP> {
+    struct request : INotify {
+    };
+    struct response {
+    };
+};
+
+

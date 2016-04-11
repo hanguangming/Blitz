@@ -1,0 +1,10 @@
+
+%%
+
+struct G_ForgeOpt {
+    uint8 index;
+    uint32 id;
+    int8 used;
+};
+
+%%

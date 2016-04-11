@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message MS_Subscribe<MS_SUBSCRIBE> {
+    struct request {
+        uint32 city;
+    };
+    struct response {
+    };
+};
+

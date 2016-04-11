@@ -1,0 +1,9 @@
+%include "message.sdl"
+
+message MS_Pvp<MS_PVP> {
+    struct request {
+    };
+    struct response {
+    };
+};
+

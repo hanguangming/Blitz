@@ -1,0 +1,24 @@
+%%cpp
+#include "libgame/g_formation.h"
+
+%include "message.sdl"
+
+extern G_FormationOpt;
+
+message CL_FormationSave<CL_FORMATION_SAVE> {
+    struct request : INotify {
+        G_FormationOpt formations[];
+    };
+    struct response {
+    };
+};
+
+message CL_FormationUse<CL_FORMATION_USE> {
+    struct request : INotify {
+        uint8 type;
+        uint8 index;
+    };
+    struct response {
+    };
+};
+

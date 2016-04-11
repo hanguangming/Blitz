@@ -1,0 +1,30 @@
+
+%%
+
+enum {
+    NODE_DB,
+    NODE_IDC,
+    NODE_LOGIN,
+    NODE_AGENT,
+    NODE_MAP,
+    NODE_FIGHT,
+    NODE_WORLD,
+    NODE_GAME,
+    NODE_UNKNOWN,
+};
+
+
+enum {
+    SERVLET_CLIENT          = 0,
+    SERVLET_LOGIN           = 1,
+    SERVLET_DB              = 2,
+    SERVLET_IDC             = 3,
+    SERVLET_AGENT           = 4,
+    SERVLET_MAP             = 5,
+    SERVLET_MAP_CLIENT      = 6,
+    SERVLET_FIGHT           = 7,
+    SERVLET_WORLD           = 8,
+    SERVLET_GAME            = 9,
+    SERVLET_UNKNOWN,
+};
+

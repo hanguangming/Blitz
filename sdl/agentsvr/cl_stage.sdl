@@ -1,0 +1,35 @@
+%%cpp
+#include "libgame/g_award.h"
+
+%include "message.sdl"
+
+extern G_AwardItem;
+
+message CL_Stage<CL_STAGE> {
+    struct request : INotify {
+        uint32 id;
+    };
+    struct response {
+    };
+};
+
+message CL_StageEnd<CL_STAGE_END> {
+    struct request : INotify {
+        int8 win;
+    };
+    struct response {
+        G_AwardItem awards[];
+    };
+};
+
+message CL_StageBatch<CL_STAGE_BATCH> {
+    struct request : INotify {
+        uint32 stage;
+        uint8 times;
+    };
+    struct response {
+        G_AwardItem awards[];
+    };
+};
+
+

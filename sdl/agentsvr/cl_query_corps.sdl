@@ -1,0 +1,16 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightCorps;
+
+message CL_QueryCorps<CL_QUERY_CORPS> {
+    struct request : INotify {
+    };
+    struct response {
+        G_FightCorps corps;
+    };
+};
+
+

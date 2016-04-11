@@ -1,0 +1,19 @@
+%%
+
+struct G_TechExpireOpt {
+    uint8 type;
+    uint32 cur;
+    uint32 research;
+    uint8 price_num;
+    uint64 cooldown; 
+};
+
+struct G_TechOpt {
+    uint8 type;
+    uint32 cur;
+    uint32 research;
+    uint8 price_num;
+    uint32 cooldown; 
+};
+
+%%

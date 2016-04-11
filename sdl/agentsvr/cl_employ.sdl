@@ -1,0 +1,13 @@
+%include "message.sdl"
+
+
+message CL_Employ<CL_EMPLOY> {
+    struct request : INotify {
+        uint32 sid;
+        int8 employ;
+    };
+    struct response {
+    };
+};
+
+

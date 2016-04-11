@@ -1,0 +1,15 @@
+%%cpp
+
+%include "message.sdl"
+
+message CL_EquipUp<CL_EQUIPUP> {
+    struct request : INotify {
+        uint32 item_id;
+        uint8 count;
+    };
+
+    struct response {
+    };
+};
+
+

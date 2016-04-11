@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_Move<CL_MOVE> {
+    struct request : INotify {
+        uint8 type;
+        uint32 path[];
+    };
+    struct response {
+    };
+};
+

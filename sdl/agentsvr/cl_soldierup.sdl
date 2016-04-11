@@ -1,0 +1,19 @@
+%include "message.sdl"
+
+message CL_SoldierUp<CL_SOLDIER_UP> {
+    struct request : INotify {
+        uint32 id;
+    };
+    struct response {
+    };
+};
+
+message CL_HeroUp<CL_HERO_UP> {
+    struct request : INotify {
+        uint32 id;
+        uint32 use[];
+    };
+    struct response {
+    };
+};
+

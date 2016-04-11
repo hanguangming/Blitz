@@ -1,0 +1,8 @@
+%include "message.sdl"
+
+message AS_MExp<AS_MEXP> {
+    struct request {
+        uint32 mexp;
+    };
+};
+

@@ -1,0 +1,6 @@
+月卡种类,月卡购买价格,月卡持续时间,奖励ID
+number,number,number,number
+type,price,time,giftid
+,,,
+1,1000,30,50078
+2,300,30,50078

@@ -1,0 +1,13 @@
+%include "message.sdl"
+
+message CL_Chat<CL_CHAT> {
+    struct request : INotify {
+        uint8 channel;
+        uint32 magic;
+        string msg;
+    };
+    struct response {
+    };
+};
+
+

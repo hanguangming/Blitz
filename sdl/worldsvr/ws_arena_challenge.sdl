@@ -1,0 +1,16 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightInfo;
+
+message WS_ArenaChallenge<WS_ARENA_CHALLENGE> {
+    struct request {
+        uint32 defender;
+    };
+    struct response {
+    };
+};
+
+

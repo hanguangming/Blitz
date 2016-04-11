@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_UseItem<CL_USE_ITEM> {
+    struct request : INotify {
+        uint32 item_id;
+        uint32 count;
+    };
+
+    struct response {
+    };
+};

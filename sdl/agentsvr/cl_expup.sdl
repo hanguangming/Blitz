@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message CL_ExpUp<CL_EXP_UP> {
+    struct request : INotify {
+        uint32 sid;
+        uint32 count;
+    };
+    struct response {
+    };
+};
+
+

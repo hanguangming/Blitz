@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message GS_Command<GS_COMMAND> {
+    struct request : INotify {
+        string cmd;
+    };
+    struct response {
+        string result;
+    };
+};
+
+

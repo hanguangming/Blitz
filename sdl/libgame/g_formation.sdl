@@ -1,0 +1,16 @@
+
+%%
+
+struct G_FormationItemOpt {
+    uint32 sid;
+    uint32 sid2;
+    int32 x;
+    int32 y;
+};
+
+struct G_FormationOpt {
+    uint8 id;
+    G_FormationItemOpt items[];
+};
+
+%%

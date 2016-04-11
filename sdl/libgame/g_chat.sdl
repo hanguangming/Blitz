@@ -1,0 +1,16 @@
+%%
+
+struct G_ChatPlayerInfo {
+    uint32 uid;
+    string name;
+    uint8 vip;
+    uint32 appearance;
+};
+
+struct G_ChatMsg {
+    uint8 channel;
+    uint32 param;
+    string message;
+};
+
+%%

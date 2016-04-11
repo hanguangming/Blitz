@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message MS_Move<MS_MOVE> {
+    struct request {
+        uint8 type;
+        uint32 path[];
+    };
+    struct response {
+    };
+};
+
+

@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message CL_Shadow<CL_SHADOW> {
+    struct request : INotify {
+    };
+    struct response {
+    };
+};
+
+

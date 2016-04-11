@@ -1,0 +1,9 @@
+%%
+
+struct G_AwardItem {
+    uint32 id;
+    uint32 count;
+};
+
+%%
+

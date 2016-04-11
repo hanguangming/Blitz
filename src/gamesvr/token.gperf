@@ -1,0 +1,28 @@
+struct token_t { 
+    const char* name;
+    unsigned id; 
+};
+
+%%
+"restart",  TK_RESTART
+"update",   TK_UPDATE
+"player",   TK_PLAYER
+"set",      TK_SET
+"add",      TK_ADD
+"money",    TK_MONEY
+"coin",     TK_COIN
+"honor",    TK_HONOR
+"recruit",  TK_RECRUIT
+"soldier",  TK_SOLDIER
+"item",     TK_ITEM
+"hero",     TK_HERO
+"level",    TK_LEVEL
+"vip",      TK_VIP
+"exp",      TK_EXP
+"time",     TK_TIME
+"stage",    TK_STAGE
+"morders",  TK_MORDERS
+"fight",    TK_FIGHT
+"with",     TK_WITH
+%%
+

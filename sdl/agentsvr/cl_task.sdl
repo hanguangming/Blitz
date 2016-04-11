@@ -1,0 +1,12 @@
+
+%include "message.sdl"
+
+message CL_TaskFinish<CL_TASK_FINISH> {
+    struct request : INotify {
+        uint32 id;
+    };
+    struct response {
+    };
+};
+
+

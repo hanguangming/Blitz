@@ -1,0 +1,1 @@
+local DrunkeryData = class("DrunkeryData")

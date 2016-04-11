@@ -1,0 +1,6 @@
+﻿ID	枪	弓	盾
+id	1	3	2
+number	number	number	number
+1	1	1	2
+3	2	1	0.3
+2	1	2	1

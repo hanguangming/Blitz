@@ -1,0 +1,9 @@
+%include "message.sdl"
+
+message WS_PlayerTouch<WS_PLAYER_TOUCH> {
+    struct request {
+    };
+    struct response {
+    };
+};
+

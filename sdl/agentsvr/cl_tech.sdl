@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_TechResearch<CL_TECH_RESEARCH> {
+    struct request : INotify {
+        uint32 id;
+    };
+    struct response {
+    };
+};
+
+

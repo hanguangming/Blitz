@@ -1,0 +1,15 @@
+%include "message.sdl"
+
+enum {
+    ID_GEN_ACCOUNT,
+};
+
+message ID_Gen<ID_GEN> {
+    struct request {
+        uint32 type;
+    };
+    struct response {
+        uint64 id;
+    };
+};
+

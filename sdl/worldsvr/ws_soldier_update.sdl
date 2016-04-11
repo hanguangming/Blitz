@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message WS_SoldierUpdate<WS_SOLDIER_UPDATE> {
+    struct request : INotify {
+        uint32 uid;
+        uint32 soldiers[];
+    };
+};
+
+

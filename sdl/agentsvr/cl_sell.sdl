@@ -1,0 +1,9 @@
+%include "message.sdl"
+
+message CL_Sell<CL_SELL> {
+    struct request : INotify {
+        uint32 item_id;
+    };
+    struct response {
+    };
+};

@@ -1,0 +1,9 @@
+﻿id	人民币数量	元宝数量	优惠数量	vip经验值
+number	number	number	number	number
+id	rmb	yuanbao	addyuanbao	vipexp
+				
+1	5	50	5	50
+2	50	500	60	500
+3	500	5000	700	5000
+4	1000	10000	1500	10000
+5	2000	20000	4000	20000

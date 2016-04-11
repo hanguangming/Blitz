@@ -1,0 +1,17 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightCorps;
+
+message MS_QueryCorps<MS_QUERY_CORPS> {
+    struct request {
+    };
+    struct response {
+        G_FightCorps corps;
+    };
+};
+
+
+

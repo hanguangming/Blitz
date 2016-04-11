@@ -1,0 +1,13 @@
+%include "message.sdl"
+
+message GM_UpdateTime<GM_UPDATE_TIME> {
+    struct request : INotify {
+        uint64 time;
+    };
+};
+
+message GM_Shutdown<GM_SHUTDOWN> {
+    struct request : INotify {
+    };
+};
+

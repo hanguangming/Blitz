@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message MC_Login<MC_LOGIN> {
+    struct request : INotify {
+        uint32 id;
+        uint64 key;
+    };
+    struct response {
+        uint32 city;
+    };
+};
+

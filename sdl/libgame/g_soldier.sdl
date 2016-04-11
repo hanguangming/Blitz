@@ -1,0 +1,18 @@
+%%cpp
+#include "libgame/g_value.h"
+
+%%
+
+extern G_ValueOpt;
+
+struct G_SoldierValueOpt {
+    uint32 sid;
+    G_ValueOpt values[];
+};
+
+struct G_SoldierOpt {
+    uint32 sid;
+};
+
+%%
+

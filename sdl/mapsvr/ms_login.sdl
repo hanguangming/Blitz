@@ -1,0 +1,17 @@
+%%cpp
+#include "libgame/g_map.h"
+
+%include "message.sdl"
+
+extern G_MapPlayerInfo;
+
+message MS_Login<MS_LOGIN> {
+    struct request {
+        G_MapPlayerInfo info;
+        uint64 key;
+    };
+    struct response {
+    };
+};
+
+

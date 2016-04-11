@@ -1,0 +1,42 @@
+%%cpp
+#include "libgame/g_value.h"
+#include "libgame/g_bag.h"
+%include "message.sdl"
+
+extern G_ValueOpt;
+extern G_BagItemOpt;
+
+message DB_ArenaChallengeStart<DB_ARENA_CHALLENGE_START> {
+    struct request {
+        G_BagItemOpt item_opts[];
+        G_ValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_ArenaChallengeAward<DB_ARENA_CHALLENGE_AWARD> {
+    struct request {
+        G_BagItemOpt item_opts[];
+        G_ValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_ArenaChallengeEnd<DB_ARENA_CHALLENGE_END> {
+    struct request {
+        uint32 attacker;
+        uint32 attacker_arena;
+        uint32 attacker_arena2;
+        uint32 attacker_arena_day;
+        uint32 defender;
+        uint32 defender_arena;
+        uint32 defender_arena2;
+        uint32 defender_arena_day;
+    };
+    struct response {
+    };
+};
+
+

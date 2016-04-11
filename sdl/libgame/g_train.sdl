@@ -1,0 +1,17 @@
+
+%%
+
+struct G_TrainExpireOpt {
+    uint32 sid;
+    uint64 expire;
+    uint8 type;
+};
+
+struct G_TrainOpt {
+    uint32 sid;
+    uint32 time;
+    uint8 type;
+};
+
+%%
+

@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message CL_MapSubscribe<CL_MAP_SUBSCRIBE> {
+    struct request : INotify {
+        uint32 city;
+    };
+    struct response {
+    };
+};
+

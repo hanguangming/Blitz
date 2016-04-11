@@ -1,0 +1,9 @@
+%include "message.sdl"
+
+message AS_Register<AS_REGISTER> {
+    struct request {
+    };
+    struct response {
+    };
+};
+

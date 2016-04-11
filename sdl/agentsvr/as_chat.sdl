@@ -1,0 +1,18 @@
+%%cpp
+#include "libgame/g_chat.h"
+
+%include "message.sdl"
+
+extern G_ChatPlayerInfo;
+
+message AS_Chat<AS_CHAT> {
+    struct request : INotify {
+        G_ChatPlayerInfo player;
+        uint8 channel;
+        uint32 magic;
+        string msg;
+    };
+};
+
+
+

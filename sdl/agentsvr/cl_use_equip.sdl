@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_UseEquip<CL_USE_EQUIP> {
+    struct request : INotify {
+        uint32 sid;
+        uint32 equip;
+    };
+    struct response {
+    };
+};
+

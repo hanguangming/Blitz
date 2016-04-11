@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_Recruit<CL_RECRUIT> {
+    struct request : INotify {
+        uint8 type;
+    };
+    struct response {
+    };
+};
+
+

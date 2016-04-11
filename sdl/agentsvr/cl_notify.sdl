@@ -1,0 +1,201 @@
+%%cpp
+#include "libgame/g_bag.h"
+#include "libgame/g_forge.h"
+#include "libgame/g_cooldown.h"
+#include "libgame/g_value.h"
+#include "libgame/g_soldier.h"
+#include "libgame/g_train.h"
+#include "libgame/g_formation.h"
+#include "libgame/g_tech.h"
+#include "libgame/g_task.h"
+#include "libgame/g_map.h"
+#include "libgame/g_fight.h"
+#include "libgame/g_chat.h"
+
+%include "message.sdl"
+
+extern G_BagItemOpt;
+extern G_Value;
+extern G_ForgeOpt;
+extern G_CooldownOpt;
+extern G_ValueOpt;
+extern G_SoldierOpt;
+extern G_TrainOpt;
+extern G_FormationOpt;
+extern G_TechOpt;
+extern G_TaskOpt;
+extern G_MapPresend;
+extern G_MapCityPresend;
+extern G_MapUnitPresend;
+extern G_MapUnitStatePresend;
+extern G_FightInfo;
+extern G_ChatPlayerInfo;
+
+message CL_NotifyItems<CL_NOTIFY_ITEMS> {
+    struct request : INotify {
+        G_BagItemOpt items[];
+    };
+};
+
+message CL_NotifyValues<CL_NOTIFY_VALUES> {
+    struct request : INotify {
+         G_ValueOpt values[];
+    };
+};
+
+message CL_NotifyForge<CL_NOTIFY_FORGE> {
+    struct request : INotify {
+        G_ForgeOpt items[];
+    };
+};
+
+message CL_NotifyCooldown<CL_NOTIFY_COOLDOWN> {
+    struct request : INotify {
+        G_CooldownOpt cds[];
+    };
+};
+
+message CL_NotifySoldierValues<CL_NOTIFY_SOLDIER_VALUES> {
+    struct request : INotify {
+        uint32 sid;
+        G_ValueOpt values[];
+    };
+};
+
+message CL_NotifySoldier<CL_NOTIFY_SOLDIER> {
+    struct request : INotify {
+        G_SoldierOpt soldiers[];
+    };
+};
+
+message CL_NotifyTrain<CL_NOTIFY_TRAIN> {
+    struct request : INotify {
+        G_TrainOpt lines[];
+    };
+};
+
+message CL_NotifyKick<CL_NOTIFY_KICK> {
+    struct request : INotify {
+        uint8 reason;
+    };
+};
+
+message CL_NotifyFormation<CL_NOTIFY_FORMATION> {
+    struct request : INotify {
+        G_FormationOpt formations[];
+    };
+};
+
+message CL_NotifyTech<CL_NOTIFY_TECH> {
+    struct request : INotify {
+        G_TechOpt techs[];
+    };
+};
+
+message CL_NotifyTask<CL_NOTIFY_TASK> {
+    struct request : INotify {
+        G_TaskOpt tasks[];
+    };
+};
+
+/*
+message CL_NotifyPresend<CL_NOTIFY_PRESEND> {
+    struct request : INotify {
+        G_MapPresend presends[];
+    };
+};*/
+
+message CL_NotifyMovePresend<CL_NOTIFY_MOVE_PRESEND> {
+    struct request : INotify {
+        G_MapPresend presend;
+    };
+};
+
+message CL_NotifyRemovePresend<CL_NOTIFY_REMOVE_PRESEND> {
+    struct request : INotify {
+        uint32 id;
+    };
+};
+
+message CL_NotifyCityPresend<CL_NOTIFY_CITY_PRESEND> {
+    struct request : INotify {
+        G_MapCityPresend cities[];
+    };
+};
+
+
+message CL_NotifyMapUnitPresend<CL_NOTIFY_MAP_UNIT_PRESEND> {
+    struct request : INotify {
+        G_MapUnitPresend defends[];
+        G_MapUnitPresend attacks[];
+    };
+};
+
+message CL_NotifyMapUnitStatePresend<CL_NOTIFY_MAP_UNIT_STATE_PRESEND> {
+    struct request : INotify {
+        G_MapUnitStatePresend presends[];
+    };
+};
+
+message CL_NotifyFight<CL_NOTIFY_FIGHT> {
+    struct request : INotify {
+        uint32 seq;
+        G_FightInfo info;
+    };
+};
+
+message CL_NotifySystem<CL_NOTIFY_SYSTEM> {
+    struct request : INotify {
+        uint8 msg_id;
+        G_ChatPlayerInfo player;
+        uint32 params[];
+    };
+};
+
+message CL_NotifyChat<CL_NOTIFY_CHAT> {
+    struct request : INotify {
+        G_ChatPlayerInfo player;
+        uint8 channel;
+        uint32 magic;
+        string msg;
+    };
+};
+
+message CL_NotifyFightReport<CL_NOTIFY_FIGHT_REPORT> {
+    struct request : INotify {
+        G_FightInfo infos[];
+    };
+};
+
+message CL_NotifyMapFightInfo<CL_NOTIFY_MAP_FIGHT_INFO> {
+    struct request : INotify {
+        G_FightInfo info;
+    };
+};
+
+message CL_NotifyMapCityEnter<CL_NOTIFY_MAP_CITY_ENTER> {
+    struct request : INotify {
+        uint32 city;
+    };
+};
+
+message CL_NotifyMapCityLeave<CL_NOTIFY_MAP_CITY_LEAVE> {
+    struct request : INotify {
+        uint32 city;
+    };
+};
+
+message CL_NotifyFightInfo<CL_NOTIFY_FIGHT_INFO> {
+    struct request : INotify {
+        G_FightInfo info;
+    };
+};
+
+message CL_NotifyPeople<CL_NOTIFY_PEOPLE> {
+    struct request : INotify {
+        uint32 people;
+        uint32 people_all;
+    };
+};
+
+

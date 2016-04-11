@@ -1,0 +1,33 @@
+%%cpp
+#include "libgame/g_bag.h"
+#include "libgame/g_train.h"
+#include "libgame/g_value.h"
+#include "libgame/g_soldier.h"
+
+%include "message.sdl"
+
+extern G_ValueOpt;
+extern G_BagItemOpt;
+extern G_TrainExpireOpt;
+extern G_SoldierValueOpt;
+
+message DB_Train<DB_TRAIN> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_BagItemOpt item_opts[];
+        G_TrainExpireOpt train_opts[];
+        G_SoldierValueOpt soldier_value_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_TrainCancel<DB_TRAIN_CANCEL> {
+    struct request {
+        G_ValueOpt value_opts[];
+        G_TrainExpireOpt train_opts[];
+    };
+    struct response {
+    };
+};
+

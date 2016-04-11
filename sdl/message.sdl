@@ -1,0 +1,224 @@
+%%cpp
+#include "libgx/serial.h"
+%include "sys/network.sdl"
+
+extern ISerial;
+extern INotify;
+
+
+enum {
+    /* login 0x10000 */
+    LS_BEGIN = SERVLET_LOGIN << 16,
+    LS_LOGIN_ACCOUNT = LS_BEGIN,
+    LS_LOGIN_SESSION,
+    LS_REGISTER,
+
+    /* client 0x0000 */
+    CL_BEGIN = SERVLET_CLIENT << 16,
+    CL_LOGIN,                   // 1
+    CL_SHOP_BUY,                // 2
+    CL_FORGE_REFRESH,           // 3
+    CL_FORGE_BUY,               // 4
+    CL_USE_ITEM,                // 5
+    CL_RECHARGE,                // 6
+    CL_EQUIPUP,                 // 7
+    CL_RECAST,                  // 8
+    CL_RECRUIT,                 // 9
+    CL_SOLDIER_UP,              // a
+    CL_HERO_UP,                 // b
+    CL_TRAIN,                   // c
+    CL_TRAIN_CANCEL,            // d
+    CL_EMPLOY,                  // e
+    CL_USE_HERO,                // f
+    CL_USE_EQUIP,               // 10
+    CL_EXP_UP,                  // 11
+    CL_FORMATION_SAVE,          // 12
+    CL_TECH_RESEARCH,           // 13
+    CL_STAGE,                   // 14
+    CL_FORMATION_USE,           // 15
+    CL_TASK_FINISH,             // 16
+    CL_MOVE,                    // 17
+    CL_SUPPLEMENT,              // 18
+    CL_QUERY_CORPS,             // 19
+    CL_SHADOW,                  // 1a
+    CL_ARENA_LIST,              // 1b
+    CL_ARENA_CHALLENGE,         // 1c
+    CL_FIGHT_RESULT,            // 1d
+    CL_ARENA_AWARD,             // 1e
+    CL_SOLDIER_RANKING_LIST,    // 1f
+    CL_SCORE_RANKING_LIST,      // 20
+    CL_PLAYER_SOLDIER_INFO,     // 21
+    CL_ARENA_RANKING_LIST,      // 22
+    CL_APPEARANCE,              // 23
+    CL_STAGE_END,               // 24
+    CL_STAGE_BATCH,             // 25
+    CL_CHAT,                    // 26
+    CL_SELL,                    // 27
+    CL_MAP_SUBSCRIBE,           // 28
+    CL_MAP_PVP,                 // 29
+
+    CL_NOTIFY_BEGIN = CL_BEGIN + 0x8000, // 0x8000
+    CL_NOTIFY_ITEMS,            // 1
+    CL_NOTIFY_VALUES,           // 2
+    CL_NOTIFY_FORGE,            // 3
+    CL_NOTIFY_COOLDOWN,         // 4
+    CL_NOTIFY_SOLDIER_VALUES,   // 5
+    CL_NOTIFY_SOLDIER,          // 6
+    CL_NOTIFY_TRAIN,            // 7
+    CL_NOTIFY_KICK,             // 8
+    CL_NOTIFY_FORMATION,        // 9
+    CL_NOTIFY_TECH,             // a
+    CL_NOTIFY_TASK,             // b
+    CL_NOTIFY_MAP_CITY_ENTER,   // c
+    CL_NOTIFY_MOVE_PRESEND,     // d
+    CL_NOTIFY_REMOVE_PRESEND,   // e
+    CL_NOTIFY_CITY_PRESEND,     // f
+    CL_NOTIFY_MAP_UNIT_PRESEND, // 10
+    CL_NOTIFY_MAP_UNIT_STATE_PRESEND, // 11
+    CL_NOTIFY_FIGHT_REPORT,     // 12
+    CL_NOTIFY_FIGHT,            // 13
+    CL_NOTIFY_SYSTEM,           // 14
+    CL_NOTIFY_CHAT,             // 15
+    CL_NOTIFY_MAP_FIGHT_INFO,   // 16
+    CL_NOTIFY_MAP_CITY_LEAVE,   // 17
+    CL_NOTIFY_FIGHT_INFO,       // 18
+    CL_NOTIFY_PEOPLE,           // 19
+
+    /* idc */
+    ID_BEGIN = SERVLET_IDC << 16,
+    ID_GEN,
+
+    /* agent 0x40000 */
+    AS_BEGIN = SERVLET_AGENT << 16,
+    AS_LOGIN,
+    AS_FIGHT_INFO,
+    AS_ARENA_LOSE,
+    AS_PLAYER_SOLDIER_INFO,
+    AS_REGISTER,
+    AS_FIGHT,
+    AS_SYSTEM_NOTIFY,
+    AS_CHAT,
+    AS_MEXP,
+    GM_ADD_ITEM,
+    GM_ADD_MONEY,
+    GM_ADD_HERO,
+    GM_UPDATE_SOLDIER_LEVEL,
+    GM_UPDATE_LEVEL,
+    GM_UPDATE_VIP,
+    GM_UPDATE_STAGE,
+    GM_ADD_EXP,
+    GM_UPDATE_MORDERS,
+    GM_FIGHT_WITH,
+
+    /* db 0x20000 */
+    DB_BEGIN = SERVLET_DB << 16,
+    DB_ACCOUNT_QUERY,
+    DB_ACCOUNT_REGISTER,
+    DB_LOAD,
+    DB_SHOP_BUY,
+    DB_FORGE_REFRESH,
+    DB_FORGE_BUY,
+    DB_RECHARGE,
+    DB_USE_COIN_ITEM,
+    DB_USE_MONEY_ITEM,
+    DB_USE_EXP_ITEM,
+    DB_USE_SOUL_ITEM,
+    DB_EQUIPUP,
+    DB_RECAST,
+    DB_RECRUIT,
+    DB_SOLDIER_UP,
+    DB_HERO_UP,
+    DB_TRAIN,
+    DB_TRAIN_CANCEL,
+    DB_EMPLOY,
+    DB_FIRE,
+    DB_USE_HERO,
+    DB_USE_EQUIP,
+    DB_EXP_UP,
+    DB_FORMATION_SAVE,
+    DB_TECH_RESEARCH,
+    DB_STAGE,
+    DB_FORMATION_USE,
+    DB_AGENT_TIMER,
+    DB_TASK_UPDATE,
+    DB_TASK_FINISH,
+    DB_SUPPLEMENT,
+    DB_SHADOW,
+    DB_ARENA_CHALLENGE_START,
+    DB_ARENA_CHALLENGE_END,
+    DB_ARENA_CHALLENGE_AWARD,
+    DB_ARENA_AWARD,
+    DB_APPEARANCE,
+    DB_GM_VALUE_ITEM,
+    DB_USE_BOX_ITEM,
+    DB_CHAT,
+    DB_SELL,
+    DB_LOGIN,
+    DB_LOGOUT,
+    DB_AGENT,
+    DB_MEXP,
+
+    /* map 0x50000 */
+    MS_BEGIN = SERVLET_MAP << 16,
+    MS_LOGIN,
+    MS_LOGOUT,
+    MS_MOVE,
+    MS_SUPPLEMENT,
+    MS_QUERY_CORPS,
+    MS_SHADOW,
+    MS_UPDATE_LEVEL,
+    MS_UPDATE_VIP,
+    MS_UPDATE_SIDE,
+    MS_UPDATE_APPEARANCE,
+    MS_UPDATE_SPEED,    
+    MS_SUBSCRIBE,
+    MS_PVP,
+
+    /* map client 0x60000 */
+    MC_BEGIN = SERVLET_MAP_CLIENT << 16,
+    MC_LOGIN,
+
+    /* world 0x80000 */
+    WS_REGISTER = SERVLET_WORLD << 16,
+    WS_ARENA_LIST,
+    WS_PLAYER_TOUCH,
+    WS_ARENA_CHALLENGE,
+    WS_ARENA_AWARD,
+    WS_LOGIN,
+    WS_LOGOUT,
+    WS_SOLDIER_RANKING_LIST,
+    WS_SCORE_RANKING_LIST,
+    WS_ARENA_RANKING_LIST,
+    WS_SCORE_UPDATE,
+    WS_SOLDIER_UPDATE,
+    WS_UPDATE_LEVEL,
+    WS_UPDATE_VIP,
+    WS_UPDATE_SIDE,
+    WS_UPDATE_APPEARANCE,
+
+    /* SERVLET_FIGHT 0x70000 */
+    FS_REGISTER = SERVLET_FIGHT << 16,
+    FS_FIGHT,
+
+
+    /* SERVLET_GAME 0x90000 */
+    GS_BEGIN = SERVLET_GAME << 16,
+    GS_COMMAND,
+
+    /* SERVLET GM */
+    GM_BEGIN = SERVLET_UNKNOWN << 16,
+    GM_UPDATE_TIME,
+    GM_SHUTDOWN,
+};
+
+enum {
+    E_FAIL = 256,
+    E_TIMEOUT,
+    E_DUP,
+    E_EXIST,
+    E_NOTEXIST,
+    E_READY,
+    E_NOTREADY,
+    E_CLOSED,
+};
+

@@ -1,0 +1,13 @@
+%%cpp
+#include "libgame/g_player.h"
+%include "message.sdl"
+
+extern G_PlayerInfo;
+
+message WS_Login<WS_LOGIN> {
+    struct request : INotify {
+        uint32 uid;
+        G_PlayerInfo info;
+    };
+};
+

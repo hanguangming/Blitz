@@ -1,0 +1,9 @@
+阵营ID,阵营名称,阵营主城,屯田区,本部守军数,被占守军数,远征军数,禁卫军数,远征军时间间隔（秒）,禁卫军时间间隔（秒）
+id,string,id,id,number,number,number,number,string,string
+id,name,capital,reborn,defarmy1,defarmy2,attarmy,guardarmy,atttime,guardtime
+,,,,,,,,,
+1,蜀,530017,500009,5,2,4,5,3600,10800
+2,魏,1060125,1090132,5,2,4,5,3600,10800
+3,吴,150148,110137,5,2,4,5,3600,10800
+4,中立,0,0,3,3,0,0,0,0
+5,黄巾,0,0,3,3,0,0,0,0

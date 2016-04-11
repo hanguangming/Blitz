@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message DB_Logout<DB_LOGOUT> {
+    struct request {
+        uint64 logout_time;
+    };
+    struct response {
+    };
+};
+

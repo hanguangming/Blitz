@@ -1,0 +1,281 @@
+%%
+
+enum {
+    G_OPT_INSERT,
+    G_OPT_UPDATE,
+    G_OPT_REMOVE,
+    G_OPT_UNKNOWN,
+};
+
+enum {
+    G_CD_FORGE_LOW,
+    G_CD_FORGE_MIDDLE,
+    G_CD_FORGE_HIGH,
+    G_CD_RECRUIT_LOW,
+    G_CD_RECRUIT_MIDDLE,
+    G_CD_RECRUIT_HIGH,
+    G_CD_UNKNOWN,
+};
+
+
+%define G_FORGE_NUM             5
+%define G_FORGE_SHOP            0
+
+enum {
+    G_FORGE_NEW                 = 0,
+    G_FORGE_LOW                 = 1,
+    G_FORGE_MIDDLE              = 2,
+    G_FORGE_HIGH                = 3,
+    G_FORGE_UNKNOWN,
+};
+
+enum {
+    G_RECRUIT_NEW               = 0,
+    G_RECRUIT_LOW               = 1,
+    G_RECRUIT_MIDDLE            = 2,
+    G_RECRUIT_HIGH              = 3,
+    G_RECRUIT_UNKNOWN,
+};
+
+%define G_ITYPE_SOUL1           0
+%define G_ITYPE_SOUL2           1
+%define G_ITYPE_EQUIP_BEGIN     2
+%define G_ITYPE_EQUIP_END       9
+%define G_ITYPE_BOX             12
+%define G_ITYPE_COIN            19
+%define G_ITYPE_MONEY           20
+%define G_ITYPE_EXP             21
+
+
+enum {
+    G_ITEM_MONEY                = 1,
+    G_ITEM_COIN                 = 2,
+    G_ITEM_EXP                  = 3,
+    G_ITEM_HONOR                = 4,
+    G_ITEM_RECRUIT              = 5,
+    G_ITEM_MORDERS              = 6,
+    G_ITEM_UNKNOWN,
+};
+
+enum {
+    G_TASK_MAIN,
+    G_TASK_BRANCH_1,
+    G_TASK_BRANCH_2,
+    G_TASK_BRANCH_3,
+    G_TASK_BRANCH_4,
+    G_TASK_UNKNOWN,
+};
+
+enum {
+    G_TASK_STATE_NOREADY,
+    G_TASK_STATE_ACCEPTED,
+    G_TASK_STATE_FINISHED,
+    G_TASK_STATE_REMOVED,
+    G_TASK_STATE_END,
+    G_TASK_STATE_UNKNOWN,
+};
+
+enum {
+    G_TASK_COND_STAGE           = 1,
+    G_TASK_COND_LEVEL           = 3,
+    G_TASK_COND_BUY_ITEM        = 10,
+    G_TASK_COND_TECH            = 12,
+};
+
+enum {
+    G_VALUE_MONEY               = 0,
+    G_VALUE_COIN                = 1,
+    G_VALUE_HONOR               = 2,
+    G_VALUE_RECRUIT             = 3,
+    G_VALUE_RECHARGE            = 4,
+    G_VALUE_LEVEL               = 5,
+    G_VALUE_EXP                 = 6,
+    G_VALUE_VIP                 = 7,
+    G_VALUE_RECRUIT_BEGIN       = 8,
+    G_VALUE_RECRUIT_1           = G_VALUE_RECRUIT_BEGIN,
+    G_VALUE_RECRUIT_2           = 9,
+    G_VALUE_RECRUIT_3           = 10,
+    G_VALUE_RECRUIT_4           = 11,
+    G_VALUE_RECRUIT_5           = 12,
+    G_VALUE_RECRUIT_END         = G_VALUE_RECRUIT_5,
+    G_VALUE_STAGE               = 13,
+    G_VALUE_MORDERS             = 14,
+    G_VALUE_FORMATION_PVE       = 15,
+    G_VALUE_FORMATION_PVP       = 16,
+    G_VALUE_FORMATION_ARENA     = 17,
+    G_VALUE_TIGER_USE_TIMES     = 18,
+    G_VALUE_SUPPLEMENT          = 19,
+    G_VALUE_SHADOW              = 20,
+    G_VALUE_CHALLENGE           = 21,
+    G_VALUE_APPEARANCE          = 22,
+    G_VALUE_MEXP                = 23,
+    G_VALUE_UNKNOWN,
+};
+
+%define G_TMP_VALUE_BEGIN       128
+enum {
+    G_VALUE_SCORE,              // 128
+    G_TMP_VALUE_UNKNOWN,
+};
+
+%define G_RAND_MAX              10000
+
+enum {
+    G_TYPE_SOLDIER              = 1,
+    G_TYPE_HERO                 = 2,
+};
+
+enum {
+    G_SOLDIER_LEVEL,
+    G_SOLDIER_EXP,
+    G_SOLDIER_USED,
+    G_SOLDIER_EQUIP_BEGIN,
+    G_SOLDIER_EQUIP_1           = G_SOLDIER_EQUIP_BEGIN,
+    G_SOLDIER_EQUIP_2,
+    G_SOLDIER_EQUIP_3,
+    G_SOLDIER_EQUIP_4,
+    G_SOLDIER_EQUIP_5,
+    G_SOLDIER_EQUIP_6,
+    G_SOLDIER_EQUIP_7,
+    G_SOLDIER_EQUIP_8,
+    G_SOLDIER_EQUIP_END         = G_SOLDIER_EQUIP_8,
+    G_SOLDIER_UNKNOWN,
+};
+
+enum {
+    G_TRAIN_LOW                 = 1,
+    G_TRAIN_MIDDLE              = 2,
+    G_TRAIN_HIGH                = 3,
+};
+
+%define G_FORMATION_NUM         3
+
+enum {
+    G_FORMATION_PVE,
+    G_FORMATION_PVP,
+    G_FORMATION_ARENA,
+    G_FORMATION_UNKNOWN,
+};
+
+%define G_TECH_COND_NONE        0
+%define G_TECH_COND_LEVEL       1
+%define G_TECH_COND_STAGE       2
+%define G_TECH_COND_PRETECH     3
+
+enum {
+    G_TECH_SOLDIERUP_NUM,
+    G_TECH_SOLDIER_PVE_NUM,
+    G_TECH_SOLDIER_PVP_NUM,
+    G_TECH_SOLDIER_UNLOCK,
+    G_TECH_SPEED,
+    G_TECH_UNKNOWN,
+};
+
+%define G_SOLDIERUP_NUM         1
+%define G_SOLDIER_PVE_NUM       2
+%define G_SOLDIER_PVP_NUM       3
+%define G_SPEED                 10000
+
+
+enum {
+    G_SIDE_SHU                  = 0,
+    G_SIDE_WEI                  = 1,
+    G_SIDE_WU                   = 2,
+    G_SIDE_OTHER                = 3,
+    G_SIDE_MAN                  = G_SIDE_OTHER,
+    G_SIDE_HUANG                = 4,
+    G_SIDE_UNKNOWN,
+};
+
+enum {
+    G_PLAYER_INIT_MONEY         = 1,
+    G_PLAYER_INIT_COIN          = 2,
+    G_PLAYER_INIT_ITEM          = 3,
+    G_PLAYER_INIT_SOLDIER       = 4,
+};
+
+enum {
+    G_MOVE_NORMAL,
+    G_MOVE_DART,
+    G_MOVE_RETREAT,
+    G_MOVE_UNKNOWN,
+};
+
+enum {
+    G_CITY_PEACE,
+    G_CITY_FIGHT,
+    G_CITY_UNKNOWN,
+};
+
+enum {
+    G_MAP_UNIT_PLAYER,
+    G_MAP_UNIT_SHADOW,
+    G_MAP_UNIT_DEFENDER,
+    G_MAP_UNIT_UNKNOWN,
+};
+
+enum {
+    G_MAP_UNIT_STATE_WAIT,
+    G_MAP_UNIT_STATE_FIGHT,
+    G_MAP_UNIT_STATE_REMOVED,
+    G_MAP_UNIT_STATE_UNKNOWN,
+};
+
+%define G_MAP_CAPITAL           1
+%define G_MAP_REVIVE            5
+
+%define G_FIGHT_QUEUE_SIZE      3
+
+%define G_ARENA_LIST_SIZE       5
+%define G_ARENA_TOP_LIST_SIZE   3
+
+enum {
+    G_FIGHT_DEUCE,
+    G_FIGHT_ATTACKER_WIN,
+    G_FIGHT_DEFENDER_WIN,
+    G_FIGHT_UNKNOWN,
+};
+
+enum {
+    G_QUALITY_0,
+    G_QUALITY_1,
+    G_QUALITY_2,
+    G_QUALITY_3,
+    G_QUALITY_RANKING_BEGIN,
+    G_QUALITY_4                 = G_QUALITY_RANKING_BEGIN,
+    G_QUALITY_5,
+    G_QUALITY_6,
+    G_QUALITY_UNKNOWN,
+};
+
+%define G_QUALITY_RANKING_NUM   G_QUALITY_UNKNOWN - G_QUALITY_RANKING_BEGIN
+
+%define G_RANKING_LIST_NUM      100
+
+%define G_ARENA_RANKING_LIST_NUM 20
+
+enum {
+    G_CHAT_CHANNEL_WORLD,
+    G_CHAT_CHANNEL_SIDE,
+    G_CHAT_CHANNEL_PERSION,
+    G_CHAT_CHANNEL_UNKNOWN,
+};
+
+%define G_FIGHT_REPORT_MAX      5
+
+%define G_NICKNAME_LIMIT        3 * 16
+%define G_USERNAME_LIMIT        64
+%define G_PASSWD_LIMIT          64
+
+%define G_MEXP_UNIT             100
+%define G_MEXP_PER_PEOPLE       10 * G_MEXP_UNIT / 200
+%define G_MEXP_DEFEND           20 * G_MEXP_UNIT
+%define G_MEXP_ATTACK           30 * G_MEXP_UNIT
+%define G_MEXP_FCM1             50 * G_MEXP_UNIT
+%define G_MEXP_FCM2             150 * G_MEXP_UNIT
+%define G_MEXP_PER_MONEY        10 * G_MEXP_UNIT
+%define G_MEXP_MAX              3000 * G_MEXP_UNIT
+
+%%
+
+

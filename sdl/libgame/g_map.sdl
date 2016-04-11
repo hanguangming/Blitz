@@ -1,0 +1,47 @@
+
+%%
+
+struct G_MapPlayerInfo {
+    string name;
+    uint8 vip;
+    uint16 level;
+    uint8 side;
+    uint32 speed;
+    uint32 appearance;
+};
+
+struct G_MapPresend {
+    uint32 id;
+    string name;
+    uint32 from;
+    uint32 to;
+    uint8 vip;
+    uint8 side;
+    uint32 speed;
+    uint32 appearance;
+};
+
+struct G_MapCityPresend {
+    uint32 id;
+    uint8 side;
+    uint8 state;
+};
+
+struct G_MapUnitPresend {
+    uint8 type;
+    uint32 id;
+    string name;
+    uint8 vip;
+    uint8 side;
+    uint8 state;
+};
+
+struct G_MapUnitStatePresend {
+    uint8 type;
+    uint32 id;
+    uint8 state;
+};
+
+%%
+
+

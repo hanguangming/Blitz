@@ -1,0 +1,17 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightCorps;
+
+message MS_Shadow<MS_SHADOW> {
+    struct request {
+        G_FightCorps corps;
+    };
+    struct response {
+        int8 ok;
+    };
+};
+
+

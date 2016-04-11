@@ -1,0 +1,14 @@
+%%cpp
+
+%include "message.sdl"
+
+message CL_Recast<CL_RECAST> {
+    struct request : INotify {
+        uint32 item_id;
+        uint32 use_items[];
+    };
+
+    struct response {
+    };
+};
+

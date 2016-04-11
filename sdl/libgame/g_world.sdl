@@ -1,0 +1,42 @@
+%%
+
+struct G_ArenaItem {
+    uint32 id;
+    uint32 index;
+    uint8 side;
+    uint8 vip;
+    uint32 appearance;
+    string name;
+};
+
+struct G_SoldierRankingItem {
+    uint32 id;
+    uint8 side;
+    uint8 vip;
+    uint32 appearance;
+    string name;
+    uint16 soldiers[];
+};
+
+struct G_ScoreRankingItem {
+    uint32 id;
+    uint8 side;
+    uint8 vip;
+    uint32 appearance;
+    string name;
+    uint32 score;
+};
+
+struct G_ArenaRankingItem {
+    uint32 id;
+    uint32 index;
+    uint8 side;
+    uint8 vip;
+    uint32 appearance;
+    uint16 level;
+    string name;
+    uint32 score;
+};
+
+%%
+

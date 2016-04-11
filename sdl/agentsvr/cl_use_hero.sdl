@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message CL_UseHero<CL_USE_HERO> {
+    struct request : INotify {
+        uint32 sid;
+        int8 use;
+    };
+    struct response {
+    };
+};
+
+

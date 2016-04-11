@@ -1,0 +1,24 @@
+%%cpp
+#include "libgame/g_formation.h"
+#include "libgame/g_value.h"
+
+%include "message.sdl"
+
+extern G_FormationOpt;
+extern G_ValueOpt;
+
+message DB_FormationSave<DB_FORMATION_SAVE> {
+    struct request {
+        G_FormationOpt formations[];
+    };
+    struct response {
+    };
+};
+
+message DB_FormationUse<DB_FORMATION_USE> {
+    struct request {
+        G_ValueOpt value_opts[];
+    };
+    struct response {
+    };
+};

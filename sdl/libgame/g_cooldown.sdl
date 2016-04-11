@@ -1,0 +1,15 @@
+%%
+
+struct G_CooldownOpt {
+    int16 id;
+    uint32 time;
+};
+
+struct G_ExpireOpt {
+    int16 id;
+    uint64 expire;
+};
+
+%%
+
+

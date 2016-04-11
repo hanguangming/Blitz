@@ -1,0 +1,13 @@
+
+
+%%cpp
+
+%option default_base ISerial
+%option request_base ISerial
+%option response_base ISerial
+%option request_name "%sReq"
+%option response_name "%sRsp"
+
+%%
+
+

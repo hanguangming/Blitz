@@ -1,0 +1,12 @@
+%include "message.sdl"
+
+message CL_Recharge<CL_RECHARGE> {
+    struct request : INotify {
+        uint8 id;
+    };
+    struct response {
+    };
+};
+
+
+

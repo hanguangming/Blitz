@@ -1,0 +1,16 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightInfo;
+
+message FS_Fight<FS_FIGHT> {
+    struct request {
+        G_FightInfo info;
+    };
+    struct response {
+        G_FightInfo info;
+    };
+};
+

@@ -1,0 +1,15 @@
+%%cpp
+#include "libgame/g_soldier.h"
+
+%include "message.sdl"
+extern G_SoldierValueOpt;
+
+message DB_UseHero<DB_USE_HERO> {
+    struct request {
+        G_SoldierValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+
+

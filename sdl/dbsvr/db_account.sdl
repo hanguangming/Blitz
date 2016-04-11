@@ -1,0 +1,28 @@
+%include "message.sdl"
+
+message DB_AccountQuery<DB_ACCOUNT_QUERY> {
+    struct request {
+        string user;
+        uint32 server;
+    };
+    struct response {
+        string passwd;
+        uint32 uid;
+    };
+};
+
+message DB_AccountRegister<DB_ACCOUNT_REGISTER> {
+    struct request {
+        string user;
+        string passwd;
+        string nickname;
+        uint8 side;
+        uint32 platform;
+        uint32 server;
+        uint32 arena;
+        uint16 lb;
+    };
+    struct response {
+    };
+};
+

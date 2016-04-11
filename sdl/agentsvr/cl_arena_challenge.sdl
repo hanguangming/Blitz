@@ -1,0 +1,18 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightInfo;
+
+message CL_ArenaChallenge<CL_ARENA_CHALLENGE> {
+    struct request : INotify {
+        uint32 uid;
+    };
+    struct response {
+        uint32 award;
+        G_FightInfo fight_info;
+    };
+};
+
+

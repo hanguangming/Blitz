@@ -1,0 +1,30 @@
+%include "message.sdl"
+
+message WS_UpdateLevel<WS_UPDATE_LEVEL> {
+    struct request : INotify {
+        uint32 uid;
+        uint16 level;
+    };
+};
+
+message WS_UpdateVip<WS_UPDATE_VIP> {
+    struct request : INotify {
+        uint32 uid;
+        uint8 vip;
+    };
+};
+
+message WS_UpdateSide<WS_UPDATE_SIDE> {
+    struct request : INotify {
+        uint32 uid;
+        uint8 side;
+    };
+};
+
+message WS_UpdateAppearance<WS_UPDATE_APPEARANCE> {
+    struct request : INotify {
+        uint32 uid;
+        uint32 appearance;
+    };
+};
+

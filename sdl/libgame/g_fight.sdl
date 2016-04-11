@@ -1,0 +1,39 @@
+%%
+
+struct G_FightTeam {
+    uint32 hero_id;
+    uint32 hero_attack;
+    uint32 hero_attack_speed;
+    uint32 hero_hp_max;
+    uint32 hero_hp;
+
+    uint32 soldier_id;
+    uint32 soldier_attack;
+    uint32 soldier_attack_speed;
+    uint32 soldier_hp;
+    uint8 soldier_num;
+
+    int32 x;
+    int32 y;
+};
+
+struct G_FightCorps {
+    uint32 uid;
+    uint32 vip;
+    string name;
+
+    G_FightTeam teams[];
+};
+
+struct G_FightInfo {
+    G_FightCorps attacker;
+    G_FightCorps defender;
+    uint8 result;
+    uint32 frames;
+    uint32 time;
+    uint32 seed;
+};
+
+
+%%
+

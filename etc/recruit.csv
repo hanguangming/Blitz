@@ -1,0 +1,8 @@
+集市等级,消耗道具,消耗数量,倒计时时间,招募值,每次刷新武将数量
+number,number,number,number,number,number
+shoplv,id,number,time,shopval,heronumber
+,,,,,
+1,30001,1,900,3,2
+2,30002,1,28800,20,3
+3,30003,1,172800,100,5
+0,0,0,0,0,0

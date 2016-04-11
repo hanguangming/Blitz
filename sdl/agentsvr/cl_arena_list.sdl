@@ -1,0 +1,18 @@
+%%cpp 
+#include "libgame/g_world.h"
+
+%include "message.sdl"
+
+extern G_ArenaItem;
+
+message CL_ArenaList<CL_ARENA_LIST> {
+    struct request : INotify {
+    };
+    struct response {
+        uint32 self;
+        G_ArenaItem tops[];
+        G_ArenaItem items[];
+    };
+};
+
+

@@ -1,0 +1,15 @@
+%include "message.sdl"
+
+message WS_Register<WS_REGISTER> {
+    struct request {
+        string user;
+        string passwd;
+        uint32 platform;
+        string nickname;
+        uint8 side;
+    };
+    struct response {
+    };
+};
+
+

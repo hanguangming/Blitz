@@ -1,0 +1,3 @@
+SUBDIRS = libgx sscc libtardb
+
+

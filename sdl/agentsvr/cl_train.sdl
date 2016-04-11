@@ -1,0 +1,20 @@
+%include "message.sdl"
+
+message CL_Train<CL_TRAIN> {
+    struct request : INotify {
+        uint32 sid;
+        uint8 type;
+    };
+    struct response {
+    };
+};
+
+message CL_TrainCancel<CL_TRAIN_CANCEL> {
+    struct request : INotify {
+        uint32 sid;
+    };
+    struct response {
+    };
+};
+
+

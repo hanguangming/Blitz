@@ -1,0 +1,21 @@
+%%cpp
+#include "libgame/g_forge.h"
+
+%include "message.sdl"
+
+message CL_ForgeRefresh<CL_FORGE_REFRESH> {
+    struct request : INotify {
+        uint8 type;
+    };
+    struct response {
+    };
+};
+
+message CL_ForgeBuy<CL_FORGE_BUY> {
+    struct request : INotify {
+        uint8 index;
+    };
+    struct response {
+    };
+};
+

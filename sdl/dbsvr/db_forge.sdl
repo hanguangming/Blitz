@@ -1,0 +1,34 @@
+%%cpp
+#include "libgame/g_forge.h"
+#include "libgame/g_bag.h"
+#include "libgame/g_cooldown.h"
+#include "libgame/g_value.h"
+
+%include "message.sdl"
+
+extern G_BagItemOpt;
+extern G_ForgeOpt;
+extern G_ValueOpt;
+extern G_ExpireOpt;
+
+message DB_ForgeRefresh<DB_FORGE_REFRESH> {
+    struct request {
+        G_BagItemOpt item_opts[];
+        G_ForgeOpt forge_opts[];
+        G_ExpireOpt cd_opts[];
+    };
+    struct response {
+    };
+};
+
+message DB_ForgeBuy<DB_FORGE_BUY> {
+    struct request {
+        uint8 index;
+        G_BagItemOpt item_opts[];
+        G_ValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+
+

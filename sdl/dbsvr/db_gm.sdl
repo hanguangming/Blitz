@@ -1,0 +1,18 @@
+%%cpp
+#include "libgame/g_bag.h"
+#include "libgame/g_value.h"
+
+%include "message.sdl"
+
+extern G_BagItemOpt;
+extern G_ValueOpt;
+
+message DB_GMValueItem<DB_GM_VALUE_ITEM> {
+    struct request {
+        G_BagItemOpt item_opts[];
+        G_ValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+

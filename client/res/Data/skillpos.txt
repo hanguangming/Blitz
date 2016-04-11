@@ -1,0 +1,18 @@
+﻿编号	类型	描述	X轴	Y轴	csb
+number	number	string	number	number	string
+id	type	desc	x	y	csb
+					
+0	0		0	0	
+1	1	单体	3	2	
+2	1	小	7	3	T_u_jinengguangquan_2.csb
+3	1	中	9	5	T_u_jinengguangquan_1.csb
+4	1	大	11	7	T_u_jinengguangquan_0.csb
+5	1	巨大	14	8	T_u_jinengguangquan.csb
+6	2	短横条	10	4	T_u_jinengguangquan2_1.csb
+7	2	中横条	15	4	T_u_jinengguangquan2_0.csb
+8	2	长横条	20	5	T_u_jinengguangquan2.csb
+9	3	短竖条	4	10	T_u_jinengguangquan2_1.csb
+10	3	中竖条	4	15	T_u_jinengguangquan2_0.csb
+11	3	长竖条	5	20	T_u_jinengguangquan2.csb
+12	0	单体普攻	0	0	
+13	0	群体普攻	3	3	

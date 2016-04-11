@@ -1,0 +1,17 @@
+%%cpp
+#include "agentsvr/as_player_soldier_info.h"
+
+%include "message.sdl"
+
+extern G_PlayerSoldierItem;
+
+message CL_PlayerSoldierInfo<CL_PLAYER_SOLDIER_INFO> {
+    struct request : INotify {
+        uint32 uid;
+    };
+    struct response {
+        G_PlayerSoldierItem list[];
+    };
+};
+
+

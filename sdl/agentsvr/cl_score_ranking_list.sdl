@@ -1,0 +1,21 @@
+%%cpp
+#include "libgame/g_world.h"
+
+%include "message.sdl"
+
+extern G_ScoreRankingItem;
+
+message CL_ScoreRankingList<CL_SCORE_RANKING_LIST> {
+    struct request : INotify {
+        uint16 begin;
+        uint16 end;
+    };
+    struct response {
+        uint32 self;
+        G_ScoreRankingItem list[];
+    };
+};
+
+
+
+

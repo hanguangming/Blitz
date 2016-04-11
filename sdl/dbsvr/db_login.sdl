@@ -1,0 +1,54 @@
+%%cpp
+#include "libgame/g_bag.h"
+#include "libgame/g_forge.h"
+#include "libgame/g_cooldown.h"
+#include "libgame/g_value.h"
+#include "libgame/g_soldier.h"
+#include "libgame/g_train.h"
+#include "libgame/g_formation.h"
+#include "libgame/g_tech.h"
+#include "libgame/g_task.h"
+
+%include "message.sdl"
+
+
+extern G_BagItemOpt;
+extern G_ValueOpt;
+extern G_ForgeOpt;
+extern G_ExpireOpt;
+extern G_SoldierValueOpt;
+extern G_TrainExpireOpt;
+extern G_FormationOpt;
+extern G_TechExpireOpt;
+extern G_TaskOpt;
+
+message DB_Load<DB_LOAD> {
+    struct request {
+    };
+
+    struct response {
+        string name;
+        int8 side;
+        uint32 arena_day;
+        uint64 login_time;
+        uint64 logout_time;
+        G_BagItemOpt bag[];
+        G_ForgeOpt forge[];
+        G_ExpireOpt cd[];
+        G_ValueOpt values[];
+        G_SoldierValueOpt soldier_values[];
+        G_TrainExpireOpt trains[];
+        G_FormationOpt formations[];
+        G_TechExpireOpt techs[];
+        G_TaskOpt tasks[];
+    };
+};
+
+message DB_Login<DB_LOGIN> {
+    struct request {
+        uint64 time;
+    };
+    struct response {
+    };
+};
+

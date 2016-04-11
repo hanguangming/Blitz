@@ -1,0 +1,8 @@
+%include "message.sdl"
+
+message MS_Logout<MS_LOGOUT> {
+    struct request {
+        uint32 uid;
+    };
+};
+

@@ -1,0 +1,16 @@
+%%cpp
+#include "libgame/g_fight.h"
+
+%include "message.sdl"
+
+extern G_FightCorps;
+
+message AS_FightInfo<AS_FIGHT_INFO> {
+    struct request {
+        uint8 formation;
+    };
+    struct response {
+        G_FightCorps info;
+    };
+};
+

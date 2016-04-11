@@ -1,0 +1,15 @@
+%include "message.sdl"
+
+struct G_PlayerSoldierItem {
+    uint32 id;
+    uint16 level;
+};
+
+message AS_PlayerSoldierInfo<AS_PLAYER_SOLDIER_INFO> {
+    struct request {
+    };
+    struct response {
+        G_PlayerSoldierItem list[];
+    };
+};
+

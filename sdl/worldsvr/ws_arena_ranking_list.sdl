@@ -1,0 +1,17 @@
+%%cpp
+#include "libgame/g_world.h"
+
+%include "message.sdl"
+
+extern G_ArenaRankingItem;
+
+message WS_ArenaRankingList<WS_ARENA_RANKING_LIST> {
+    struct request {
+    };
+    struct response {
+        G_ArenaRankingItem list[];
+    };
+};
+
+
+

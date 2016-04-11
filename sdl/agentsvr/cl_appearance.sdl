@@ -1,0 +1,10 @@
+%include "message.sdl"
+
+message CL_Appearance<CL_APPEARANCE> {
+    struct request : INotify {
+        uint32 appearance_id;
+    };
+    struct response {
+    };
+};
+

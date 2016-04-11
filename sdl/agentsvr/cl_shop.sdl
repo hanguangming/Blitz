@@ -1,0 +1,14 @@
+%include "message.sdl"
+
+message CL_ShopBuy<CL_SHOP_BUY> {
+    struct request : ISerial {
+        uint32 id;
+        uint32 shopid;
+        uint32 count;
+    };
+
+    struct response {
+        
+    };
+};
+

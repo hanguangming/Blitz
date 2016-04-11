@@ -1,0 +1,14 @@
+%include "message.sdl"
+
+message LS_Register<LS_REGISTER> {
+    struct request : ISerial {
+        string user;
+        string passwd;
+        uint32 platform;
+        string nickname;
+        uint8 side;
+    };
+    struct response {
+    };
+};
+

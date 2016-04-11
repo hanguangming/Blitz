@@ -1,0 +1,18 @@
+%%cpp
+#include "libgame/g_bag.h"
+#include "libgame/g_soldier.h"
+
+%include "message.sdl"
+
+extern G_BagItemOpt;
+extern G_SoldierValueOpt;
+
+message DB_ExpUp<DB_EXP_UP> {
+    struct request {
+        G_BagItemOpt item_opts[];
+        G_SoldierValueOpt value_opts[];
+    };
+    struct response {
+    };
+};
+

@@ -1,0 +1,11 @@
+%include "message.sdl"
+
+message CL_Supplement<CL_SUPPLEMENT> {
+    struct request : INotify {
+    };
+    struct response {
+        uint32 people;
+    };
+};
+
+
